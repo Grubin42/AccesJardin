@@ -23,4 +23,13 @@ go.work.sum
 
 # env file
 .env
+
+# Ignore le dossier public généré
+public/
+
+# Ignore le fichier de lock Hugo
+.hugo_build.lock
+
+# Autres fichiers et dossiers potentiellement ignorés
+resources/
 .DS_Store
