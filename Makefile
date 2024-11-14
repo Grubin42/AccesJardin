@@ -3,7 +3,7 @@
 HUGO_VERSION=latest
 DOCKER_HUGO_IMAGE=ghcr.io/gohugoio/hugo:${HUGO_VERSION}
 
-.PHONY: help init build-dev build-prod up-dev up-prod down logs-dev logs-prod clean new-post new-page new-archetype serve build
+.PHONY: help init build-dev build-prod up-dev up-prod down logs-dev logs-prod clean new-post new-page new-archetype
 
 help:
 	@echo "Commandes disponibles :"
@@ -70,11 +70,3 @@ new-page:
 new-archetype:
 	@read -p "Entrez le nom du nouvel archétype (ex: produit.md) : " name; \
 	docker run --rm -v $(PWD)/app:/project -w /project ${DOCKER_HUGO_IMAGE} new archetype/$$name
-
-# Démarrer le serveur de développement
-serve:
-	docker run --rm -p 1313:1313 -v $(PWD)/app:/project -w /project ${DOCKER_HUGO_IMAGE} server --bind 0.0.0.0 --disableFastRender
-
-# Générer le site statique
-build:
-	docker run --rm -v $(PWD)/app:/project -w /project ${DOCKER_HUGO_IMAGE}
