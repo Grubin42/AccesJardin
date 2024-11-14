@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ .Title }} - Accès Jardin</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <script src="/js/main.js" defer></script>
-<script src="https://unpkg.com/htmx.org@2.0.3" integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq" crossorigin="anonymous"></script>
-</head>
-<body>
-    {{ partial "navbar.html" . }}
-    
-    <main id="main-content">
-        {{ block "main" . }}
-        <!-- Contenu principal injecté ici -->
-        {{ end }}
-    </main>
-    
-    {{ partial "footer.html" . }}
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ .Title }} - Accès Jardin</title>
+        <link rel="stylesheet" href="/css/styles.css" media="print" onload="this.media='all'">
+        <noscript><link rel="stylesheet" href="/css/styles.css"></noscript>
+        <script src="/js/main.js" defer></script>
+    </head>
+    <body>
+        {{ partial "navbar.html" . }}
+        
+        <main>
+            {{ block "main" . }}{{ end }}
+        </main>
+        
+        {{ partial "footer.html" . }}
+        
+        <script type="module" src="/js/main.js"></script>
+    </body>
 </html>

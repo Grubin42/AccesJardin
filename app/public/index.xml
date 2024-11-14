@@ -22,10 +22,10 @@
       <description>&lt;p&gt;Bienvenue chez Accès Jardin ! Voici notre page d&amp;rsquo;accueil.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Réalisation</title>
-      <link>http://localhost:1313/realisation/</link>
+      <title>Réalisations</title>
+      <link>http://localhost:1313/realisations/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/realisation/</guid>
+      <guid>http://localhost:1313/realisations/</guid>
       <description></description>
     </item>
     <item>

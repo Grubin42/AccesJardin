@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - Accès Jardin</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <script src="/js/main.js" defer></script>
-<script src="https://unpkg.com/htmx.org@2.0.3" integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq" crossorigin="anonymous"></script>
-</head>
-<body>
-    <nav class="navbar">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Services - Accès Jardin</title>
+        <link rel="stylesheet" href="/css/styles.css" media="print" onload="this.media='all'">
+        <noscript><link rel="stylesheet" href="/css/styles.css"></noscript>
+        <script src="/js/main.js" defer></script>
+    </head>
+    <body>
+        <nav class="navbar">
     <div class="container">
-        <a href="/" class="logo">Accès Jardin</a>
+        <a href="/" class="ajax-link logo" data-target="main">Accès Jardin</a>
         <ul class="nav-links">
-            <li><a href="/home" hx-get="/home" hx-target="#main-content" hx-swap="innerHTML">Home</a></li>
-            <li><a href="/services" hx-get="/services" hx-target="#main-content" hx-swap="innerHTML">Services</a></li>
-            <li><a href="/realisation" hx-get="/realisation" hx-target="#main-content" hx-swap="innerHTML">Réalisation</a></li>
-            <li><a href="/contact" hx-get="/contact" hx-target="#main-content" hx-swap="innerHTML">Contact</a></li>
+            <li><a href="/" class="ajax-link" data-target="main">Accueil</a></li>
+            <li><a href="/services" class="ajax-link" data-target="main">Services</a></li>
+            <li><a href="/contact" class="ajax-link" data-target="main">Contact</a></li>
+            <li><a href="/realisations" class="ajax-link" data-target="main">Réalisations</a></li>
         </ul>
     </div>
 </nav>
-    
-    <main id="main-content">
         
+        <main>
+            
 <section class="services">
     <div class="container">
         <h1>Nos Services</h1>
@@ -37,12 +37,14 @@
     </div>
 </section>
 
-    </main>
-    
-    <footer class="footer">
+        </main>
+        
+        <footer class="footer">
     <div class="container">
         <p>&copy; 2024 Accès Jardin. Tous droits réservés.</p>
     </div>
 </footer>
-</body>
+        
+        <script type="module" src="/js/main.js"></script>
+    </body>
 </html>
